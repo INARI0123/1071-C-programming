@@ -1,0 +1,78 @@
+# include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<time.h>
+# define MAX 200
+
+void prchar(char c,int n)
+{
+    for(int i=0;i<=n;i++)
+    {
+        printf("%c",c);
+    }
+    printf("\n");
+}
+
+
+int main(void)
+{
+	int dice[MAX];
+	int count[6];
+	int N;
+    int i, count_1 = 0,count_2 = 0,count_3 = 0,count_4 = 0,count_5 = 0,count_6 = 0;
+    int sumcount = 0;
+	printf("Enter N: ");
+	scanf("%d",&N);
+    srand(time(NULL));
+    for(int i=1;i<=N;i++)
+    {
+        for(int j=1;j<=10;j++)
+        {
+            
+        }
+    }
+    printf("Statistics Summary\n");
+    for(int i=0;i<=N;i++)
+    {
+        N = rand()%6+1;
+        if(N==1)
+        {
+            count_1++;
+        }
+        else if(N==2)
+        {
+            count_2++;
+        }
+        else if(N==3)
+        {
+            count_3++;
+        }
+        else if(N==4)
+        {
+            count_4++;
+        }
+        else if(N==5)
+        {
+            count_5++;
+        }
+        else if(N==6)
+        {
+            count_6++;
+        }
+        else
+            printf("\n");
+    }
+    printf("[1]");
+    prchar('*',count_1);
+    printf("[2]");
+    prchar('*',count_2);
+    printf("[3]");
+    prchar('*',count_3);
+    printf("[4]");
+    prchar('*',count_4);
+    printf("[5]");
+    prchar('*',count_5);
+    printf("[6]");
+    prchar('*',count_6);
+    return 0;
+}
